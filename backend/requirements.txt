@@ -23,7 +23,7 @@ idna==3.10
 importlib_metadata==8.5.0
 importlib_resources==6.4.5
 iniconfig==2.0.0
-itsdangerous==2.2.0co
+itsdangerous==2.2.0
 Jinja2==3.1.4
 Mako==1.3.6
 MarkupSafe==2.1.5
