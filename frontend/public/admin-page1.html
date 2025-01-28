@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page 1 - Order Details</title>
+  <link rel="stylesheet" href="./assets/admin-page1.css">
+</head>
+<body>
+  <nav class="navbar">
+    <p>DeliverOO</p>
+  </nav>
+  <div class="container">
+    <h1>Order Details</h1>
+    
+    <div class="order-segment">
+      <div class="order-header">
+        <p><strong>Order Number:</strong> #12345</p>
+      </div>
+
+      <div class="input-group">
+        <label for="status">Change Status:</label>
+        <select id="status" required>
+          <option value="">--Select Status--</option>
+          <option value="pending">Pending</option>
+          <option value="delivered">Delivered</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <div class="input-group">
+          <label for="origin"><strong>Parcel Origin:</strong></label>
+          <input type="text" id="origin" placeholder="Enter Google Pin Location" required>
+        </div>
+
+        <div class="input-group">
+          <label for="destination"><strong>Parcel Destination:</strong</label>
+          <input type="text" id="destination" placeholder="Enter Google Pin Location" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <p><strong>Parcel Weight:</strong> 5kg</p>
+        <p><strong>Parcel Size:</strong> 30cm x 20cm x 10cm</p>
+      </div>
+
+      <div class="input-group">
+        <label for="transit-location">Transit Location:</label>
+        <input type="text" id="transit-location" placeholder="Enter Google Pin Location" required>
+      </div>
+
+      <div class="actions">
+        <button class="cancel-btn" onclick="history.back()">Cancel</button>
+        <button class="confirm-btn" disabled>Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Enable Confirm button only when all fields are filled
+    const inputs = document.querySelectorAll('input, select');
+    const confirmBtn = document.querySelector('.confirm-btn');
+
+    inputs.forEach(input => {
+      input.addEventListener('input', () => {
+        const allFilled = Array.from(inputs).every(field => field.value.trim() !== '');
+        confirmBtn.disabled = !allFilled;
+      });
+    });
+
+    // Redirect to admin-page2.html upon clicking Confirm
+    confirmBtn.addEventListener('click', () => {
+      window.location.href = 'admin-page2.html';
+    });
+  </script>
+</body>
+</html>

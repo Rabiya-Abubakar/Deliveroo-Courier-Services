@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery Details - Deliveroo</title>
+  <link rel="stylesheet" href="./assets/delivery-details.css">
+</head>
+<body>
+  <nav class="navbar">
+    <p>DeliverOO</p>
+  </nav>
+  <div class="container">
+    <h1>Delivery Details</h1>
+
+    <div class="filter-buttons">
+      <button class="btn all-btn" onclick="filterSegments('all')">All</button>
+      <button class="btn delivered-btn" onclick="filterSegments('delivered')">Delivered</button>
+      <button class="btn pending-btn" onclick="filterSegments('pending')">Pending</button>
+      <button class="btn canceled-btn" onclick="filterSegments('canceled')">Canceled</button>
+    </div>
+
+    <div id="order-list" class="order-list">
+      <!-- Example order segments -->
+      <div class="order-segment" data-status="delivered">
+        <p><strong>Order Number:</strong> #123456</p>
+        <p><strong>Status:</strong> <span class="status delivered">Delivered</span></p>
+        <p><strong>Parcel Origin:</strong> Nairobi (Google Pin: <a href="#">-1.2921,36.8219</a>)</p>
+        <p><strong>Parcel Destination:</strong> Mombasa (Google Pin: <a href="#">-4.0435,39.6682</a>)</p>
+        <p><strong>Parcel Description:</strong> Electronics - Fragile</p>
+        <p><strong>Parcel Weight:</strong> 1200 grams</p>
+        <p><strong>Parcel Size:</strong> 30cm x 20cm x 15cm</p>
+      </div>
+      <div class="order-segment" data-status="delivered">
+        <p><strong>Order Number:</strong> #4563456</p>
+        <p><strong>Status:</strong> <span class="status delivered">Delivered</span></p>
+        <p><strong>Parcel Origin:</strong> Kisumu (Google Pin: <a href="#">-1.2921,36.8219</a>)</p>
+        <p><strong>Parcel Destination:</strong> Mombasa (Google Pin: <a href="#">-4.0435,39.6682</a>)</p>
+        <p><strong>Parcel Description:</strong> Medicine - Fragile</p>
+        <p><strong>Parcel Weight:</strong> 1400 grams</p>
+        <p><strong>Parcel Size:</strong> 33cm x 25cm x 18cm</p>
+      </div>
+      
+      <div class="order-segment" data-status="pending">
+        <p><strong>Order Number:</strong> #234567</p>
+        <p><strong>Status:</strong> <span class="status pending">Pending</span></p>
+        <p><strong>Parcel Origin:</strong> Kisumu (Google Pin: <a href="#">-0.0917,34.7675</a>)</p>
+        <p><strong>Parcel Destination:</strong> Eldoret (Google Pin: <a href="#">0.5143,35.2698</a>)</p>
+        <p><strong>Parcel Description:</strong> Books and Documents</p>
+        <p><strong>Parcel Weight:</strong> 1500 grams</p>
+        <p><strong>Parcel Size:</strong> 40cm x 30cm x 10cm</p>
+      </div>
+      
+      <div class="order-segment" data-status="cancelled">
+        <p><strong>Order Number:</strong> #345678</p>
+        <p><strong>Status:</strong> <span class="status cancelled">Cancelled</span></p>
+        <p><strong>Parcel Origin:</strong> Nakuru (Google Pin: <a href="#">-0.3031,36.0800</a>)</p>
+        <p><strong>Parcel Destination:</strong> Naivasha (Google Pin: <a href="#">-0.7177,36.4356</a>)</p>
+        <p><strong>Parcel Description:</strong> Perishable Food Items</p>
+        <p><strong>Parcel Weight:</strong> 500 grams</p>
+        <p><strong>Parcel Size:</strong> 20cm x 15cm x 10cm</p>
+      </div>
+      
+      <div class="order-segment" data-status="pending">
+        <p><strong>Order Number:</strong> #456789</p>
+        <p><strong>Status:</strong> <span class="status pending">Pending</span></p>
+        <p><strong>Parcel Origin:</strong> Malindi (Google Pin: <a href="#">-3.2192,40.1169</a>)</p>
+        <p><strong>Parcel Destination:</strong> Kilifi (Google Pin: <a href="#">-3.6319,39.8499</a>)</p>
+        <p><strong>Parcel Description:</strong> Clothing and Accessories</p>
+        <p><strong>Parcel Weight:</strong> 800 grams</p>
+        <p><strong>Parcel Size:</strong> 25cm x 20cm x 10cm</p>
+      </div>
+      
+      <div class="order-segment" data-status="delivered">
+        <p><strong>Order Number:</strong> #567890</p>
+        <p><strong>Status:</strong> <span class="status delivered">Delivered</span></p>
+        <p><strong>Parcel Origin:</strong> Thika (Google Pin: <a href="#">-1.0387,37.0834</a>)</p>
+        <p><strong>Parcel Destination:</strong> Machakos (Google Pin: <a href="#">-1.5177,37.2634</a>)</p>
+        <p><strong>Parcel Description:</strong> Furniture - Assembled</p>
+        <p><strong>Parcel Weight:</strong> 5000 grams</p>
+        <p><strong>Parcel Size:</strong> 100cm x 50cm x 40cm</p>
+      </div>
+      
+      <div class="order-segment" data-status="pending">
+        <p><strong>Order Number:</strong> #678901</p>
+        <p><strong>Status:</strong> <span class="status pending">Pending</span></p>
+        <p><strong>Parcel Origin:</strong> Nairobi (Google Pin: <a href="#">-1.2921,36.8219</a>)</p>
+        <p><strong>Parcel Destination:</strong> Kisii (Google Pin: <a href="#">-0.6773,34.7796</a>)</p>
+        <p><strong>Parcel Description:</strong> Medical Supplies</p>
+        <p><strong>Parcel Weight:</strong> 2000 grams</p>
+        <p><strong>Parcel Size:</strong> 35cm x 25cm x 20cm</p>
+      </div>
+      
+      <div class="order-segment" data-status="cancelled">
+        <p><strong>Order Number:</strong> #789012</p>
+        <p><strong>Status:</strong> <span class="status cancelled">Cancelled</span></p>
+        <p><strong>Parcel Origin:</strong> Kakamega (Google Pin: <a href="#">0.2827,34.7519</a>)</p>
+        <p><strong>Parcel Destination:</strong> Bungoma (Google Pin: <a href="#">0.5630,34.5561</a>)</p>
+        <p><strong>Parcel Description:</strong> Sports Equipment</p>
+        <p><strong>Parcel Weight:</strong> 3000 grams</p>
+        <p><strong>Parcel Size:</strong> 60cm x 40cm x 30cm</p>
+      </div>
+      
+
+  <script>
+    function filterSegments(status) {
+      const segments = document.querySelectorAll('.order-segment');
+      segments.forEach(segment => {
+        if (status === 'all' || segment.getAttribute('data-status') === status) {
+          segment.style.display = 'block';
+        } else {
+          segment.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
