@@ -1,4 +1,8 @@
 from flask import Blueprint, request, jsonify
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from models import db, Parcel, User
 from flask_jwt_extended import jwt_required, get_jwt_identity
 import requests
