@@ -16,7 +16,7 @@ def send_email(to_email, subject, content):
     }
     headers = {
         "accept": "application/json",
-        "api-key": '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',
+        "api-key":os.getenv('BREVO_API_KEY'),
         "content-type": "application/json"
     }
     response = requests.post(url, json=payload, headers=headers)

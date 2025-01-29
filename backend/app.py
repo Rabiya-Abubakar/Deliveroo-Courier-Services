@@ -7,6 +7,12 @@ from models import db, User, Parcel, Notification, AuditLog
 from views.auth_view import auth_bp, init_app
 from views.user_view import user_bp
 from views.admin_view import admin_bp
+from flask import Flask
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://lio:liomuhati58@localhost:5432/deliveroo'
