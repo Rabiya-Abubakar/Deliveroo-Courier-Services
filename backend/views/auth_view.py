@@ -1,4 +1,8 @@
 from flask import Blueprint, request, jsonify
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from models import db, User
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import create_access_token
