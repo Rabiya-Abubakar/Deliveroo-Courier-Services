@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles/about.css'; // Make sure to have this file in the correct path
 
-const AboutUs = () => {
+const AboutPage = () => {
   return (
     <div>
       <div className="pink-navbar">
@@ -55,4 +55,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutPage;
