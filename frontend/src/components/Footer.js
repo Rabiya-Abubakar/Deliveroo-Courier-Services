@@ -1,13 +1,10 @@
-import React from 'react';
-import '../styles/Footer.css';
+// src/components/Footer.js
+import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer-container">
-      <p>&copy; 2025 Deliveroo. All rights reserved.</p>
-      <p>
-        <a href="/terms">Terms of Service</a> | <a href="/privacy">Privacy Policy</a>
-      </p>
+    <footer className="footer">
+      <p>&copy; {new Date().getFullYear()} DeliverOO. All Rights Reserved.</p>
     </footer>
   );
 };

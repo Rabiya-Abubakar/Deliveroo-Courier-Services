@@ -3,102 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DeliverOO</title>
-  <link rel="stylesheet" href="./assets/index.css">
+  <title>DeliverOO - Fast & Reliable Parcel Delivery</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="%PUBLIC_URL%/favicon.ico">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="DeliverOO - Your trusted parcel delivery service. Fast, secure, and reliable courier services.">
+  <meta name="keywords" content="parcel delivery, courier service, fast delivery, logistics, shipping">
+  <meta name="author" content="DeliverOO Team">
+
+  <!-- Open Graph (For Social Media Sharing) -->
+  <meta property="og:title" content="DeliverOO - Fast & Reliable Parcel Delivery">
+  <meta property="og:description" content="Get your parcels delivered on time, every time with DeliverOO.">
+  <meta property="og:image" content="%PUBLIC_URL%/logo.png">
+  <meta property="og:url" content="https://yourwebsite.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/styles/global.css">
+
 </head>
 <body>
-  <nav class="navbar">
-    <p>DeliverOO</p>
-  </nav>
-  <div class="container">
-    <h1>Welcome to Deliveroo</h1>
-    <p>Start your journey,on a fast and easy delivery.</p>
-    <div class="button-container">
-      <a href="signup.html" class="btn-signup">Sign Up</a>
-    </div>
-    <div class="icon-container">
-      <div class="icon-slot-1">
-        <a href="create-order.html">
-          <div class="slot">
-            <p>Create Order</p>
-          </div>
-        </a>
-      </div>
-      <div class="icon-slot-2">
-        <a href="update-order.html">
-          <div class="slot">
-            <p>Update Order</p>
-          </div>
-        </a>
-      </div>
-      <div class="icon-slot-3">
-        <a href="cancel-order.html">
-          <div class="slot">
-            <p>Cancel Order</p>
-          </div>
-        </a>
-      </div>
-      <div class="icon-slot-4">
-        <a href="delivery-details.html">
-          <div class="slot">
-            <p>Delivery Details</p>
-          </div>
-        </a>
-      </div>
-      <div class="icon-slot-5">
-        <a href="track-order.html">
-          <div class="slot">
-            <p>Track My Order</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <footer class="footer">
-    <div class="footer-container">
-      <!-- Logo and Tagline -->
-      <div class="footer-logo">
-        <h2>Deliver<span class="infinity">OO</span></h2>
-        <p>Your trusted courier service for reliable deliveries.</p>
-      </div>
-  
-      <!-- Quick Links -->
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contactus.html">Contact Us</a></li>
-          <li><a href="faqs.html">FAQs</a></li>
-        </ul>
-      </div>
-  
-      <!-- Contact Information -->
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p><strong>Email:</strong> support@deliveroo.com</p>
-        <p><strong>Phone:</strong> +123 456 7890</p>
-        <p><strong>Address:</strong> 123 DeliverOO Street, Courier City, DX</p>
-      </div>
-  
-      <!-- Social Media -->
-      <div class="footer-social">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#"><img src="./assets/images/facebook-icon.png" alt="Facebook"></a>
-          <a href="#"><img src="./assets/images/twitter-icon.png" alt="Twitter"></a>
-          <a href="#"><img src="./assets/images/instagram-icon.png" alt="Instagram"></a>
-        </div>
-      </div>
-    </div>
-  
-    <!-- Copyright -->
-    <div class="footer-bottom">
-      <p>&copy; 2025 DeliverOO. All Rights Reserved.</p>
-    </div>
-  </footer>
-  
-  
-  <script src="../src/components/Footer.js"></script>
+  <!-- Navigation Placeholder (Handled by React) -->
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <!-- React App Root -->
+  <div id="root"></div>
+
+  <!-- Service Worker (For Progressive Web App Support) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('%PUBLIC_URL%/service-worker.js').catch(err => console.log('Service Worker registration failed:', err));
+      });
+    }
+  </script>
 </body>
 </html>

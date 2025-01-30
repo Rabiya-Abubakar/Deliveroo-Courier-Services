@@ -1,40 +1,55 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Services from './pages/Services';
-import FAQs from './pages/FAQs';
-import CreateParcel from './components/CreateParcel';
-import ParcelDetails from './components/ParcelDetails';
-import AdminDashboard from './components/AdminDashboard';
-import './App.css';
-import Register from './components/Register';
-import Login from './components/Login';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AboutUs from './pages/AboutPage';
+import Signup from "./pages/SignupPage";
+import AdminPage1 from "./pages/AdminPage1";
+import AdminPage2 from "./pages/AdminPage2";
+import AdminPage3 from './pages/AdminPage3';
+import ContactPage from "./pages/ContactPage";
+import CreateOrder from "./pages/CreateOrder";
+import CancelOrder from "./pages/CancelOrder";
+import DeliveryDetails from "./pages/DeliveryDetails";
+import Faqs from "./pages/Faqs";
+import HomePage from "./pages/HomePage";
+import Login from "./pages/Login";
+import OrderDetails from "./pages/OrderDetails";
+import ServicePage from "./pages/ServicePage";
+import TrackOrder from "./pages/TrackOrder";
+import UpdateOrder from "./pages/UpdateOrder";
+import UserPage from "./pages/UserPage";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/create-parcel" element={<CreateParcel />} />
-            <Route path="/parcels/:id" element={<ParcelDetails />} />
-            <Route path="/admin" element={<AdminDashboard />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} /><Route path="/services" element={<Services />} />
-            <Route path="/faqs" element={<FAQs />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <>
+      <Header />
+      <Navbar />
+      
+      <Routes>  
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/services" element={<ServicePage />} />
+        <Route path="/faqs" element={<Faqs />} />        
+        <Route path="/userpage" element={<UserPage />} />
+        <Route path="/track-order" element={<TrackOrder />} />
+        <Route path="/order-details" element={<OrderDetails />} />
+        <Route path="/admin-page1" element={<AdminPage1 />} />
+        <Route path="/admin-page2" element={<AdminPage2 />} />
+        <Route path="/admin-page3" element={<AdminPage3 />} />
+        <Route path="/create-order" element={<CreateOrder />} />
+        <Route path="/cancel-order" element={<CancelOrder />} />
+        <Route path="/delivery-details" element={<DeliveryDetails />} />
+        <Route path="/update-order" element={<UpdateOrder />} />
+        <Route path="/login" element={<Login />} />        
+      </Routes>
+
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
