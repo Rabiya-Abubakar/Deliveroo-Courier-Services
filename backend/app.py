@@ -10,22 +10,18 @@ from models import db, User, Parcel, Notification, AuditLog
 from views.auth_view import auth_bp, init_app
 from views.user_view import user_bp
 from views.admin_view import admin_bp
-from flask import Flask
 from dotenv import load_dotenv
-import os
 
+# Load environment variables
 load_dotenv()
-
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://lio:liomuhati58@localhost:5432/deliveroo'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['JWT_SECRET_KEY'] = 'your_jwt_secret_key'
+app.config['JWT_SECRET_KEY'] = os.environ.get('JWT_SECRET_KEY')  
 
 db.init_app(app)
 migrate = Migrate(app, db)
-
-# Initialize JWTManager
 jwt = JWTManager(app)
 init_app(app)
 CORS(app)
@@ -34,7 +30,6 @@ CORS(app)
 app.register_blueprint(auth_bp, url_prefix='/auth')
 app.register_blueprint(user_bp, url_prefix='/user')
 app.register_blueprint(admin_bp, url_prefix='/admin')
-
 
 # Add welcome message route
 @app.route('/')
@@ -47,7 +42,6 @@ def get_users():
     users = User.query.all()
     users_list = [{'id': user.id, 'name': user.name, 'email': user.email} for user in users]
     return {'users': users_list}
-
 
 @app.route('/parcels')
 def get_parcels():
@@ -68,8 +62,6 @@ def get_audit_logs():
     audit_logs = AuditLog.query.all()
     audit_logs_list = [{'id': audit_log.id, 'parcel_id': audit_log.parcel_id, 'user_id': audit_log.user_id, 'action': audit_log.action, 'old_value': audit_log.old_value, 'new_value': audit_log.new_value, 'created_at': audit_log.created_at} for audit_log in audit_logs]
     return {'audit_logs': audit_logs_list}
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
