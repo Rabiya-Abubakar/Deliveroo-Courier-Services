@@ -2,7 +2,10 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_jwt_extended import JWTManager
-from flask_cors import CORS  
+from flask_cors import CORS 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) 
 from models import db, User, Parcel, Notification, AuditLog
 from views.auth_view import auth_bp, init_app
 from views.user_view import user_bp
