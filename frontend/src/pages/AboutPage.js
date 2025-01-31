@@ -4,9 +4,6 @@ import '../assets/styles/about.css'; // Make sure to have this file in the corre
 const AboutPage = () => {
   return (
     <div>
-      <div className="pink-navbar">
-        <h1 className="navbar-title">DeliverOO</h1>
-      </div>
 
       <main>
         <section className="about-us">

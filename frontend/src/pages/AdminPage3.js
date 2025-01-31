@@ -31,9 +31,6 @@ const AdminPage3 = () => {
 
   return (
     <div className="admin-container">
-      <nav className="navbar">
-        <p>Admin Dashboard</p>
-      </nav>
       <h1>Edit Delivery Details</h1>
       <p>Modify the details of the order as needed.</p>
 

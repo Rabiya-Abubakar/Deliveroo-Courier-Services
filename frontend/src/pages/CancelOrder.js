@@ -35,6 +35,7 @@ const CancelOrder = () => {
   };
 
   return (
+    <div className='cancel-body'>
     <div className="cancel-container">
       <h1>Cancel Order</h1>
       <form id="cancel-form">
@@ -154,6 +155,7 @@ const CancelOrder = () => {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 };

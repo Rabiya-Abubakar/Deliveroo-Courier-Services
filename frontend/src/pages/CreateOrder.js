@@ -29,9 +29,6 @@ const CreateOrder = () => {
 
   return (
     <div>
-      <nav className="navbar">
-        <p className="head"><strong>DeliverOO</strong></p>
-      </nav>
       <div className="container">
         <h1>Create Order</h1>
         <p>Fill in the form below to create an order.</p>
@@ -71,7 +68,7 @@ const CreateOrder = () => {
 
           <button type="submit" className="btn submit-btn">Submit</button>
         </form>
-        <a href="index.html" className="btn back-btn">Back to Home</a>
+        <a href="/" className="btn back-btn">Back to Home</a>
       </div>
     </div>
   );

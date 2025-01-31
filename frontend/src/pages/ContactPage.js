@@ -31,11 +31,6 @@ const ContactUs = () => {
 
   return (
     <div>
-      {/* Pink Navbar */}
-      <div className="pink-navbar">
-        <h1 className="navbar-title">DeliverOO</h1>
-      </div>
-
       {/* Contact Us Section */}
       <main className="contact-container">
         <section className="contact-header">

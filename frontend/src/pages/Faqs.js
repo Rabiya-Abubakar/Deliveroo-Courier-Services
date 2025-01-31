@@ -24,8 +24,7 @@ const faqsData = [
   },
   {
     question: "What payment methods do you accept?",
-    answer:
-      "We accept all major credit cards, PayPal, and mobile money services.",
+    answer: "We accept all major credit cards, PayPal, and mobile money services.",
   },
 ];
 
@@ -33,7 +32,7 @@ const Faqs = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   return (
@@ -46,9 +45,20 @@ const Faqs = () => {
           <div key={index} className="faq-item">
             <div className="faq-question" onClick={() => toggleFAQ(index)}>
               <span>{faq.question}</span>
-              <span className="faq-toggle">{openIndex === index ? "−" : "+"}</span>
+              <span className={`faq-toggle ${openIndex === index ? "open" : ""}`}>
+                {openIndex === index ? "−" : "+"}
+              </span>
             </div>
-            {openIndex === index && <p className="faq-answer">{faq.answer}</p>}
+            <div
+              className="faq-answer-container"
+              style={{
+                maxHeight: openIndex === index ? "150px" : "0px",
+                opacity: openIndex === index ? "1" : "0",
+                transition: "max-height 0.3s ease-out, opacity 0.3s ease-out",
+              }}
+            >
+              <p className="faq-answer">{faq.answer}</p>
+            </div>
           </div>
         ))}
       </div>

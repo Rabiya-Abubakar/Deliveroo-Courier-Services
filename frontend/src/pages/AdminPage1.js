@@ -42,11 +42,8 @@ const AdminPage1 = () => {
 
   return (
     <div>
-      <nav className="navbar">
-        <p>DeliverOO</p>
-      </nav>
-
-      <div className="container">
+  <div className='admin1-body'>
+      <div className="admin1-container">
         <h1>Order Details</h1>
         
         <div className="order-segment">
@@ -121,6 +118,7 @@ const AdminPage1 = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

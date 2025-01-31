@@ -4,23 +4,7 @@ import '../assets/styles/services.css'; // Make sure to place your CSS file in t
 const Services = () => {
   return (
     <div>
-      {/* Pink Navbar */}
-      <div className="pink-navbar">
-        <h1 className="navbar-title">DeliverOO</h1>
-      </div>
-
-      {/* Header */}
-      <header className="header-bar">
-        <div className="logo-container">
-          <span className="logo">
-            Deliver<span className="infinity">OO</span>
-          </span>
-        </div>
-        <div className="scooter-icon">
-          <img src="./assets/images/scooter-icon.png" alt="Scooter Icon" />
-        </div>
-      </header>
-
+      
       <main className="services-content">
         <section className="intro">
           <h2>Our Services</h2>

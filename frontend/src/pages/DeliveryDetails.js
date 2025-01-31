@@ -34,7 +34,7 @@ const DeliveryDetails = () => {
     },
     {
       orderNumber: '#345678',
-      status: 'cancelled',
+      status: 'canceled',
       origin: 'Nakuru',
       destination: 'Naivasha',
       description: 'Perishable Food Items',
@@ -70,7 +70,7 @@ const DeliveryDetails = () => {
     },
     {
       orderNumber: '#789012',
-      status: 'cancelled',
+      status: 'canceled',
       origin: 'Kakamega',
       destination: 'Bungoma',
       description: 'Sports Equipment',
@@ -86,10 +86,7 @@ const DeliveryDetails = () => {
   };
 
   return (
-    <div>
-      <nav className="navbar">
-        <p>DeliverOO</p>
-      </nav>
+    <div className='delivery-body'>
       <div className="container">
         <h1>Delivery Details</h1>
 
