@@ -17,7 +17,6 @@ import ServicePage from "./pages/ServicePage";
 import TrackOrder from "./pages/TrackOrder";
 import UpdateOrder from "./pages/UpdateOrder";
 import UserPage from "./pages/UserPage";
-import UsersPage from "./pages/UsersPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -44,8 +43,7 @@ function App() {
         <Route path="/cancel-order" element={<CancelOrder />} />
         <Route path="/delivery-details" element={<DeliveryDetails />} />
         <Route path="/update-order" element={<UpdateOrder />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/users" element={<UsersPage />} />        
+        <Route path="/login" element={<Login />} />       
       </Routes>
 
       <Footer />
