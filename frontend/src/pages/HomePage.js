@@ -6,6 +6,12 @@ const Homepage = () => {
   return (
     <div className="homepage-container">
       <nav className="navbar">
+      <div className="btn-sign">
+        <a href="/signup" >Sign Up</a>
+        </div>
+        <div className="btn-login">
+        <a href="/login" >Login</a>
+        </div>
       </nav>
 
       <header className="hero">
@@ -25,23 +31,6 @@ const Homepage = () => {
           <span>- Sarah Williams</span>
         </div>
       </section>
-
-      <footer className="footer">
-        <ul className="footer-links">
-          <li><Link to="/privacy">Privacy Policy</Link></li>
-          <li><Link to="/sitemap">Sitemap</Link></li>
-          <li>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-          </li>
-        </ul>
-        <div className="email-signup">
-          <input type="email" placeholder="Enter your email" />
-          <button>Sign Up</button>
-        </div>
-      </footer>
     </div>
   );
 };

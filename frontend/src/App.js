@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import AboutPage from './pages/AboutPage';
 import Signup from "./pages/SignupPage";
 import AdminPage1 from "./pages/AdminPage1";
@@ -19,12 +19,11 @@ import UpdateOrder from "./pages/UpdateOrder";
 import UserPage from "./pages/UserPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <Header />
+
       <Navbar />
       
       <Routes>  
@@ -44,7 +43,7 @@ function App() {
         <Route path="/cancel-order" element={<CancelOrder />} />
         <Route path="/delivery-details" element={<DeliveryDetails />} />
         <Route path="/update-order" element={<UpdateOrder />} />
-        <Route path="/login" element={<Login />} />        
+        <Route path="/login" element={<Login />} />       
       </Routes>
 
       <Footer />

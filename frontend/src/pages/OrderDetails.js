@@ -20,14 +20,78 @@ const OrderDetails = () => {
       timeCovered: '3hrs',
       timeRemaining: '2hrs',
     },
+
+    {
+      orderNumber: '16735',
+      route: 'Nairobi to Kisii',
+      status: 'enroute',
+      distanceCovered: '400km',
+      totalDistance: '500km',
+      estimatedTime: '6hrs',
+      timeCovered: '3hrs',
+      timeRemaining: '3hrs',
+    },
+
+    {
+      orderNumber: '1236786',
+      route: 'Kisumu to Mombasa',
+      status: 'delivered',
+      distanceCovered: '1000km',
+      totalDistance: '1000km',
+      estimatedTime: '10hrs',
+      timeCovered: '10hrs',
+      timeRemaining: '10hrs',
+    },
+
+    {
+      orderNumber: '69873445',
+      route: 'Eldoret to Kapsabet',
+      status: 'canceled',
+      distanceCovered: '0',
+      totalDistance: '500km',
+      estimatedTime: '0hrs',
+      timeCovered: '0hrs',
+      timeRemaining: '0hrs',
+    },
+
+    {
+      orderNumber: '686538',
+      route: 'Lamu to Wajir',
+      status: 'enroute',
+      distanceCovered: '400km',
+      totalDistance: '780km',
+      estimatedTime: '7hrs',
+      timeCovered: '3hrs',
+      timeRemaining: '4hrs',
+    },
+
+    {
+      orderNumber: '12332456',
+      route: 'Syokimau to Kajiado',
+      status: 'enroute',
+      distanceCovered: '250km',
+      totalDistance: '560km',
+      estimatedTime: '4hrs',
+      timeCovered: '3hrs',
+      timeRemaining: '1hrs',
+    },
+
+    {
+      orderNumber: '4523456',
+      route: 'Nakuru to Busia',
+      status: 'canceled',
+      distanceCovered: '0km',
+      totalDistance: '0km',
+      estimatedTime: '0hrs',
+      timeCovered: '0hrs',
+      timeRemaining: '0hrs',
+    }
     // More orders can be added here
   ];
 
   return (
-    <div className="tracking-container">
-      <nav className="navbar">
-        <p>DeliverOO</p>
-      </nav>
+    <div>
+    <div className="tracking-container">  
       <h1>Order Tracking</h1>
 
       <div className="filter-buttons">
@@ -48,6 +112,12 @@ const OrderDetails = () => {
           onClick={() => filterSegments('delivered')}
         >
           Delivered
+        </button>
+        <button
+          className="btn canceled-btn"
+          onClick={() => filterSegments('canceled')}
+        >
+          Canceled
         </button>
       </div>
 
@@ -101,6 +171,7 @@ const OrderDetails = () => {
       <button className="close-btn" onClick={() => window.location.href = '/track-order'}>
         Close
       </button>
+    </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 /* login.css */
 
 /* General Styling */
- .signup-body {
+  .login-body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -10,9 +10,10 @@
     align-items: center;
     height: 100vh;
     background: linear-gradient(to bottom, #ff0080, #ffbf00, #7bff00);
+
   }
   
-  .signup-container {
+  .login-container {
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -21,7 +22,7 @@
     align-items: center;
   }
   
-  .signup-container h1 {
+  .login-container h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #333333;

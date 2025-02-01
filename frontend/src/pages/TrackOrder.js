@@ -12,14 +12,14 @@ const TrackOrder = () => {
     event.preventDefault();
     if (parcelNumber) {
       // You can handle the tracking logic here, such as redirecting or fetching order details
-      window.location.href = `/tracking-order/${parcelNumber}`;
+      window.location.href = `/order-details`;
     } else {
       alert('Please enter a valid parcel number');
     }
   };
 
-  return (
-    <div className="container">
+  return (<div className='track-body'>
+    <div className="track-container">
       <h1>Track Your Order</h1>
       <p className="instructions">
         We've got you covered. Enter your delivery number and we'll track its location.
@@ -42,6 +42,7 @@ const TrackOrder = () => {
           Track Order
         </button>
       </form>
+    </div>
     </div>
   );
 };

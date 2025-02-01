@@ -9,14 +9,17 @@ const UserPage = () => {
       <p>Start your journey with fast and easy delivery.</p>
 
       <div className="icon-container">
-        <div className="icon-slot">
+        <div className="create-slot">
+          <div className="icon-slot">
           <Link to="/create-order">
             <div className="slot">
               <p>Create Order</p>
             </div>
           </Link>
+          </div>
         </div>
 
+        <div className="update-slot">
         <div className="icon-slot">
           <Link to="/update-order">
             <div className="slot">
@@ -24,7 +27,9 @@ const UserPage = () => {
             </div>
           </Link>
         </div>
+        </div>
 
+        <div className="cancel-slot">
         <div className="icon-slot">
           <Link to="/cancel-order">
             <div className="slot">
@@ -32,7 +37,9 @@ const UserPage = () => {
             </div>
           </Link>
         </div>
+        </div>
 
+          <div className="delivery-slot">
         <div className="icon-slot">
           <Link to="/delivery-details">
             <div className="slot">
@@ -40,7 +47,9 @@ const UserPage = () => {
             </div>
           </Link>
         </div>
+        </div>
 
+        <div className="track-slot">
         <div className="icon-slot">
           <Link to="/track-order">
             <div className="slot">
@@ -48,6 +57,7 @@ const UserPage = () => {
             </div>
           </Link>
         </div>
+      </div>
       </div>
     </div>
   );

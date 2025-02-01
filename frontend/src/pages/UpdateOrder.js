@@ -28,9 +28,6 @@ const UpdateOrder = () => {
 
   return (
     <div className="container">
-      <nav className="navbar">
-        <p>DeliverOO</p>
-      </nav>
       <h1>Update Your Order</h1>
       <p>Fill in the form below to create/update your order.</p>
 

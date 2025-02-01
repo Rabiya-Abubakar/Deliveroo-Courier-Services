@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../assets/styles/signup.css';
+import '../assets/styles/login.css';
 
 const Login = () => {
   const [role, setRole] = useState('');
@@ -19,10 +19,10 @@ const Login = () => {
     }
   };
 
-  return (
-    <div className="signup-container">
+  return (<div className='login-body'>
+    <div className="login-container">
       <h1>Login</h1>
-      <form id="signup-form" onSubmit={handleSubmit}>
+      <form id="login-form" onSubmit={handleSubmit}>
         <label htmlFor="role">Select Your Role:</label>
         <select
           id="role"
@@ -68,6 +68,7 @@ const Login = () => {
 
         <button type="submit" className="submit-btn">Sign Up</button>
       </form>
+    </div>
     </div>
   );
 };

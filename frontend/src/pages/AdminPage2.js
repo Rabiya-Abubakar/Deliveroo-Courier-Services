@@ -7,12 +7,8 @@ const AdminPage2 = () => {
   };
 
   return (
-    <div>
-      <nav className="navbar">
-        <p>DeliverOO</p>
-      </nav>
-
-      <div className="container">
+    <div className='admin2-body'>      
+      <div className="admin2-container">
         <h1>Order Summary</h1>
 
         <div className="order-segment">

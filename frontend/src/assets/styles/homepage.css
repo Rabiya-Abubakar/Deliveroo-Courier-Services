@@ -15,7 +15,7 @@
   .hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(to right, #ff66b2, #ff99cc); /* Gradient pink */
+    background: linear-gradient(to right, #f5007a, #ff99cc); /* Gradient pink */
     color: white;
   }
   
